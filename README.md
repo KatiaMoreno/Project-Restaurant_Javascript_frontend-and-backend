@@ -1,4 +1,4 @@
-# Project-Restaurant_Javascript_frontend-and-backend
+# Project-Restaurant_Javascript_front-end-and-back-end
 PROJECT PROPOSAL: DEVELOPMENT OF WEBSITE TO RESTAURANT WITH MANAGEMENT SYSTEM
 
 
