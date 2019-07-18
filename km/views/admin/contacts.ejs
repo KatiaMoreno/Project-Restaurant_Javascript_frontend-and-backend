@@ -1,0 +1,72 @@
+<%- include("include_views_admin/header_admin") -%>
+
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Contact
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+          <li class="active">Contact</li>
+        </ol>
+      </section>
+
+      <!-- Main content -->
+      <section class="content container-fluid">
+
+        <div class="box">
+          <div class="box-header">
+            <h3 class="box-title">List</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body no-padding">
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th style="width: 10px">#</th>
+                  <th>Name</th>
+                  <th>E-mail</th>
+                  <th>message</th>
+                  <th style="min-width: 75px;">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <% data.forEach(function(row){ %>
+                    <tr data-row=" <%= JSON.stringify(row); %>">
+                      <td><%= row.id %></td>
+                      <td><%= row.name %></td>
+                      <td><%= row.email%></td>
+                      <td><%= row.message%></td>
+                  <td><button type="button" class="btn btn-xs btn-danger btn-delete"><i class="fa fa-trash"></i> Delete</button></td>
+                </tr>
+                <% }); %>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+<%- include("include_views_admin/footer_admin") -%>
+
+
+<script src="/js/km-formsave.js"></script>
+<script src="/js/km-grid.js"></script>
+<script>
+
+  new KmGrid({
+    deleteUrl: '/admin/contacts/${data.id}',
+    deleteMsg: 'Do you want sure DELETE the Contact  ${data.name} ?'
+    });
+
+ 
+
+
+</script>  

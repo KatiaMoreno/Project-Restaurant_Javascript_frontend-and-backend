@@ -1,0 +1,72 @@
+<div class="gtco-section" style="padding-bottom: 14em;">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="col-md-6 animate-box">
+                      <%- include('alerts') -%>
+
+					<h3>Book a table</h3>
+                    <form action="/reservations" method="POST">
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="inputName">Name</label>
+                                <input type="text" id="inputName" name="name" class="form-control" value="<%=body.name %>">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="inputEmail">E-mail</label>
+                                <input type="email" id="inputEmail" name="email" class="form-control" value="<%=body.email %>">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="inputPeople">Number of guests</label>
+                                <select id="inputPeople" name="people" class="form-control">
+                                    <option value=""> -- Select -- </option>
+                                    <option <%if (body.people == 2){%>selected<%} %> value="1">1 person</option>
+                                    <option <%if (body.people == 3){%>selected<%} %> value="2">2 people</option>
+                                    <option <%if (body.people == 4){%>selected<%} %> value="3">3 people</option>
+                                    <option <%if (body.people == 5){%>selected<%} %> value="4">4 people </option>
+                                    <option <%if (body.people == 1){%>selected<%} %> value="5">5 poeple</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="inputDate">Date</label>
+                                <input type="text" id="inputDate" name="date" class="form-control"  value="<%=body.date %>">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="inputTime">Time</label>
+                                <input type="text" id="inputTime" name="time" class="form-control" value="<%=body.time %>">
+                            </div>
+                        </div>
+                    
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-primary btn-block" value="Book Now">
+                            </div>
+                        </div>
+                    </form>
+				</div>
+				<div class="col-md-5 col-md-push-1 animate-box">
+                        <div class="gtco-contact-info">
+    
+                                <h3>GROUP RESERVATION CONTACT US.</h3>
+                                <ul>
+                                    <li class="address">30-34 Westmoreland St, Dublin, D02 HK35 </li>
+                                    <li class="phone"><a>(353) 086 454 6042</a></li>
+                                    <li class="email"><a>morenokatiac@hotmail.com</a></li>
+                                    <li class="url"><a href="/">Km restaurante</a></li>
+                                </ul>
+
+                               
+                        </div>
+                </div>
+				</div>
+			</div>
+		</div>
+	</div>
